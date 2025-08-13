@@ -1,12 +1,8 @@
 name: markin-ai-diplom
-
 on:
   push:
     branches:
       - main
-    tags:
-      - 'v*'
-
 env:
   IMAGE_TAG: markinai/diplom_app
   RELEASE_NAME: myapp
@@ -14,7 +10,7 @@ env:
 
 jobs:
   build-and-push:
-    name: Build Docker image
+    name: Build Docker image & push
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,3 +33,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ env.IMAGE_TAG }}:${{ env.VERSION }}
+
