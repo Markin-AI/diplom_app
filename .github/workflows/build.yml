@@ -1,4 +1,4 @@
-name: markin-ai-diplom
+name: markin-ai-diplom-build
 on:
   push:
     branches:
@@ -33,4 +33,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ env.IMAGE_TAG }}:${{ env.VERSION }}
-
+  
