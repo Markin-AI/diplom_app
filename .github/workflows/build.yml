@@ -90,7 +90,7 @@ jobs:
             echo "deployment.yaml not found in the current directory"
             exit 1
           fi
-          sed -i "s|image: markinai/diplom_app:.*|image: ${{ env.IMAGE_TAG }}:${{ env.VERSION }}|" ./deployment/deployment.yaml
+          sed -i "s|image: markinai/diplom_app:.*|image: ${{ env.IMAGE_TAG }}:${{ env.VERSION }}|" ./deployment.yaml
 
       - name: Create kubeconfig
         run: |
